@@ -2,9 +2,15 @@ import React from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
 import { TicketTable } from "../../components/ticket-table/TicketTable.comp";
 import tickets from "../../asset/data/dummy-tickets.json";
+import { PageBreadcrumb } from "../../components/breadcrumb/Breadcrumb.comp";
 export const Dashboard = () => {
   return (
     <Container className=" text-center mt-6 mb-2">
+      <Row>
+        <Col>
+          <PageBreadcrumb page="Dashboard" />
+        </Col>
+      </Row>{" "}
       <Row>
         <Col>
           <Button
@@ -15,7 +21,6 @@ export const Dashboard = () => {
           </Button>
         </Col>
       </Row>
-
       <Row>
         <Col className="text-center mb-2">
           <div>Total tickets: 50</div>
